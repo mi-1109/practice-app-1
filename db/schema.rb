@@ -10,7 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_26_054042) do
+ActiveRecord::Schema.define(version: 2021_03_26_062002) do
+
+  create_table "post_recipes", force: :cascade do |t|
+    t.string "title"
+    t.text "caption"
+    t.string "recipe_image_id"
+    t.integer "user_id"
+    t.integer "ng_flag1"
+    t.integer "ng_flag2"
+    t.integer "ng_flag3"
+    t.integer "ng_flag4"
+    t.integer "ng_flag5"
+    t.integer "ng_flag6"
+    t.integer "ng_flag7"
+    t.integer "ng_flag8"
+    t.integer "ng_flag9"
+    t.integer "ng_flag10"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -18,7 +37,7 @@ ActiveRecord::Schema.define(version: 2021_03_26_054042) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.string "name", null: false
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
