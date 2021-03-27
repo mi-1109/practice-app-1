@@ -1,0 +1,11 @@
+<h1>MY PAGE</h1>
+
+<div class="mypage">
+  <%= attachment_image_tag @user, :profile_image %>
+  <%= @user.name %>
+  <%= @user.introduction %>
+  <p><%= @user.created_at.strftime('%Y/%m/%d') %>にvegecookに参加しました!</p>
+  <% if @user.id == current_user.id %>
+    <%= link_to "プロフィール編集", edit_user_path(@user) %>
+  <% end %>
+</div>
