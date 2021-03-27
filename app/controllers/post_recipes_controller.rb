@@ -14,6 +14,7 @@ class PostRecipesController < ApplicationController
   end
 
   def show
+    @post_recipe = PostRecipe.find(params[:id])
   end
 
   def destroy

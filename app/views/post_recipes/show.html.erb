@@ -1,0 +1,7 @@
+<div class="recipe-show">
+  <%= attachment_image_tag @post_recipe, :recipe_image %>
+  <%= @post_recipe.title %>
+  <%= @post_recipe.caption %>
+  <%= @post_recipe.user.name %>
+  <p>投稿日: <%= @post_recipe.created_at.strftime('%Y/%m/%d') %></p>
+</div>
