@@ -18,6 +18,9 @@ class PostRecipesController < ApplicationController
   end
 
   def destroy
+    @post_recipe = PostRecipe.find(params[:id])
+    @post_recipe.destroy
+    redirect_to root_path
   end
 
   private
