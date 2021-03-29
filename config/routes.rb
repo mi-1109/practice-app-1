@@ -13,5 +13,9 @@ Rails.application.routes.draw do
   end
 
   resources :post_recipes, only: [:new, :create, :index, :show, :destroy]
-  resources :users, only: [:show, :edit, :update]
+
+  resources :users, only: [:show, :edit, :update] do
+    get 'saved_recipe', on: :member
+  end
+
 end
