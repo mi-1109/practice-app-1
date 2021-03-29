@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   resources :homes, only: [:index] do
     collection do
       get :about
+      get :guide
+      get :premium
+      get :contact
     end
   end
 

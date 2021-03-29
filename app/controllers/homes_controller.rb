@@ -4,5 +4,14 @@ class HomesController < ApplicationController
 
   def about
   end
+  
+  def guide
+  end
+  
+  def premium
+  end
+  
+  def contact
+  end
 
 end
